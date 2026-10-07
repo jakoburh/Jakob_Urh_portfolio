@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <title>JUV interactive CV</title>
+</head>
+<body>
+<section class="layout">
+    <header class="welcome"> <!-- header se uporablja za uvod spletne strani-naslov, logo, uvodno sporočilo   -->
+
+Thank you for stopping by! This is not your average CV — it’s a small playground. 
+Every symbol hides a story, every click reveals a part of who I am. If you’re here for skills and projects, follow the light side. If you’re curious about the person behind the work, 
+the dark side is waiting.
+    </header>
+
+      <ol class="card">
+        <li>Near <b>Ljubljana</b></li>
+        <li>Excel, Python, CSS, HTML, R, SQL</li>
+        <li>Current project: web CV</li>
+        <li>Learns from his mistakes</li>
+      </ol>
+
+    <main class="yin-yang" >
+  <svg class="yin-yang-svg" viewBox="-100 -120 400 400" aria-label="Yin-Yang symbol">
+    <!-- YIN (black) half -->
+    <a class="yin" href="https://your-yin-link.example" target="_blank" aria-label="Yin section">
+      <title>Go to Yin (professional side)</title>
+      <path d="M100,0
+               A100,100 0 1,1 100,200
+               A50, 50 0 1, 0 100,100
+               M100,100
+               A50,50  0 1,1 100,0
+               Z" fill="#392fff"/>
+      <circle cx="100" cy="50" r="20" fill="#46efff"/>
+      <text x="100" y="26" fill="white" font-size="13" text-anchor="middle">Personal</text>
+    <g class="yin-list-svgtxt">
+    <text x="70" y="46" fill="white" font-size="12" text-anchor="middle">
+      <tspan x="70" dy="18">•life</tspan>
+      <tspan x="70" dy="16">•travelling</tspan>
+      <tspan x="70" dy="16">•food</tspan>
+    </text>
+    </g>
+    </a>
+
+    <!-- YANG (white) half -->
+    <a class="yang" href="https://your-yang-link.example" target="_blank" aria-label="Yang section">
+      <title>Go to Yang (personal side)</title>
+      <path d="M100,0
+               A100,100 0 0,0 100,200
+               A50, 50 0 1, 0 100,100
+               M100,100
+               A50,50  0 1,1 100,0
+               Z" fill="#46efff"/>
+      <circle cx="100" cy="150" r="20" fill="#392fff"/>
+      <text x="93" y="126" fill="black" font-size="13" text-anchor="middle">Professional</text>
+      <g class="yang-list-svgtxt">
+      <text x="70" y="46" fill="black" font-size="12" text-anchor="middle">
+      <tspan x="70" dy="18">•Projects</tspan>
+      <tspan x="70" dy="16">•Work experience</tspan>
+      <tspan x="70" dy="16">•Recommendations</tspan>
+      </text>
+      </g>
+    </a>
+  </svg>
+</main>
+
+  <div  class="language">
+  <!-- Language selection -->
+  <p>Select language:🚧</p>
+  <button>EN</button>
+  <button>SI</button>
+  </div>
+    <aside class="avatar">
+      <div class="avatar_welcome">To me actions give meaning to words.</div>
+      <div class="avatar_card">Magic ball knows all, but shows little.</div>
+      <div class="avatar_yy">I wonder what would happen if you click on the simbol.</div>
+      <div class="avatar_language">The flag will represent the web CV language.</div>
+    </aside>
+  </section>
+
+</body>
+</html>
