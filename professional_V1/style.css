@@ -1,0 +1,325 @@
+* {
+margin:0;
+padding: 0;
+box-sizing: border-box;
+
+}
+
+body{
+  background:
+    radial-gradient(60vmin 40vmin at 50% 55%, rgba(9, 151, 146, 0.392), transparent 60%),
+    linear-gradient(180deg, #131b29, #00226b);
+}
+
+.layout {
+  position:relative;
+  display:grid; /* creates a grid */
+  grid-template-areas:
+    "welcome1 welcome2 welcome3"
+    "left    center  right"
+    "lang1    lang2    lang3";
+  grid-template-columns:clamp(12vw,15vw, 18vw) clamp(64vw,70vw,76vw) clamp(12vw,15vw, 18vw); /* width of each column */
+  grid-template-rows: clamp(12vh,15vh, 18vh) clamp(64vh,70vh,76vh) clamp(12vh,15vh, 18vh); /* width of each column */
+  height:100vh;
+  font-family:  Lucida Calligraphy;
+}
+
+/* Regions */
+.welcome { 
+grid-area: welcome2; 
+display:block; 
+text-align: center; 
+background: #0deffff0; 
+margin:auto;
+padding:clamp(min(3vh,3vw), min(6vh,6vw), min(7vh,7vw)) ; 
+border-radius: 16px; 
+font-size: clamp(min(0.5vh,0.5vw), min(1.5vh,1.5vw), min(2.3vh,2.3vw));
+width: fit-content; 
+max-width: 40vw;
+height: fit-content; 
+max-height: 20vh;  }
+
+.avatar  {  grid-area: right; display: flex; align-items: center; justify-content:flex-start; }
+
+
+.language{  grid-area: lang2; display:block;
+ text-align :center;background-color:#6effb4;margin:auto; ; width:fit-content; height:fit-content;
+font-size: clamp(min(0.5vh,0.5vw), min(2vh,2vw), min(2.3vh,2.3vw));
+  border: 0.2rem solid #70eaf7;border-radius: 8px;   padding:2%; }
+.language button {  
+font-size: clamp(min(0.5vh,0.5vw), min(2vh,2vw), min(2.3vh,2.3vw));
+height:fit-content;
+width: fit-content;}
+.welcome:hover, .card:hover, .avatar:hover, .language:hover {
+  transform: translateY(-5%);
+  box-shadow: 1 12px 28px rgb(0, 0, 0);
+}
+/* BUISNESS CARD */
+.card{
+  grid-area: left;
+  display: block;
+  background-image: url("ball.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  align-items: center;
+  height:fit-content;
+  max-height: 40vh;
+  max-width: 40vw;
+  width: fit-content;
+  padding-top: clamp(min(3vh,3vw), min(4vh,4vw), min(10vh,10vw));
+  padding-bottom:clamp(min(3vh,3vw), min(7vh,7vw), min(16vh,16vw));
+  padding-right:clamp(min(3vh,3vw), min(9vh,9vw), min(10vh,10vw));
+  padding-left:clamp(min(3vh,3vw), min(12vh,12vw), min(20vh,20vw));
+  margin:auto;
+  list-style: none;
+  font-size: clamp(min(0.1vh,0.1vw), min(1.0vh,1.0vw), min(2.0vh,2.0vw));
+  color:#0716e9; justify-content:flex-start;  
+  overflow:hidden;
+}
+.card li::marker {
+  content: "✨";    /* your custom marker */
+  font-size: 1.1em;   /* can style size/color/font */
+  color: #410e0e;
+}
+/* language box */
+.language p {
+color:#ae00ff;
+}
+footer{
+background-color:transparent;
+}
+
+/* avatar */
+.avatar{
+  background-image: url("avatar_default.png");
+  background-size: contain;     /* or contain */
+  background-position: center;
+  background-repeat: no-repeat;
+  padding:10%;
+  margin:auto;
+  height:15vh;
+  width: 15vw;
+  position: relative;
+}
+
+.avatar_welcome, .avatar_card, .avatar_yy, .avatar_language, .avatar_default{
+ position: absolute;
+  opacity: 0;                  /* sit over the avatar */
+  background-image: url("bubble.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: black; /* nalaganje teksta drug na drugega */
+}
+.welcome:hover ~ .avatar .avatar_welcome{
+opacity:1;
+position:relative;
+background-image: url(bubble.png);
+background-size: contain;   
+background-position: center;
+background-repeat: no-repeat;
+color:black;
+display:block;
+padding-top:clamp(min(3vh,3vw), min(15vh,15vw), min(20vh,20vw));
+padding-bottom: clamp(min(3vh,3vw), min(20vh,20vw), min(20vh,20vw));
+padding-right:clamp(min(3vh,3vw), min(6vh,6vw), min(10vh,10vw));
+padding-left:clamp(min(3vh,3vw), min(6vh,6vw), min(20vh,20vw));
+height:fit-content;
+width:fit-content;
+transform: translateX(-7.5vh) translateY(-7.5vw);
+font-size: clamp(min(0.5vh,0.5vw), min(1.5vh,1.5vw), min(2.3vh,2.3vw));
+transition: transform 600ms ease, font-size 300ms ease;
+}
+.card:hover ~ .avatar .avatar_card{
+opacity:1;
+position:relative;
+background-image: url(bubble.png);
+background-size: contain;   
+background-position: center;
+background-repeat: no-repeat;
+color:black;
+display:block;
+padding-top:clamp(min(3vh,3vw), min(15vh,15vw), min(20vh,20vw));
+padding-bottom: clamp(min(3vh,3vw), min(20vh,20vw), min(20vh,20vw));
+padding-right:clamp(min(3vh,3vw), min(6vh,6vw), min(10vh,10vw));
+padding-left:clamp(min(3vh,3vw), min(6vh,6vw), min(20vh,20vw));
+height:fit-content;
+width:fit-content;
+transform: translateX(-7.5vh) translateY(-7.5vw);
+font-size: clamp(min(0.5vh,0.5vw), min(1.5vh,1.5vw), min(2.3vh,2.3vw));
+transition: transform 600ms ease, font-size 300ms ease;
+}
+
+.language:hover ~ .avatar .avatar_language{
+opacity:1;
+position:relative;
+background-image: url(bubble.png);
+background-size: contain;   
+background-position: center;
+background-repeat: no-repeat;
+color:black;
+display:block;
+padding-top:clamp(min(3vh,3vw), min(15vh,15vw), min(20vh,20vw));
+padding-bottom: clamp(min(3vh,3vw), min(20vh,20vw), min(20vh,20vw));
+padding-right:clamp(min(3vh,3vw), min(6vh,6vw), min(10vh,10vw));
+padding-left:clamp(min(3vh,3vw), min(6vh,6vw), min(20vh,20vw));
+height:fit-content;
+width:fit-content;
+transform: translateX(-7.5vh) translateY(-7.5vw);
+font-size: clamp(min(0.5vh,0.5vw), min(1.5vh,1.5vw), min(2.3vh,2.3vw));
+transition: transform 600ms ease, font-size 300ms ease;
+}
+
+main:hover ~ .avatar .avatar_yy{
+opacity:1;
+position:relative;
+background-image: url(bubble.png);
+background-size: contain;   
+background-position: center;
+background-repeat: no-repeat;
+color:black;
+display:block;
+padding-top:clamp(min(3vh,3vw), min(15vh,15vw), min(20vh,20vw));
+padding-bottom: clamp(min(3vh,3vw), min(20vh,20vw), min(20vh,20vw));
+padding-right:clamp(min(3vh,3vw), min(6vh,6vw), min(10vh,10vw));
+padding-left:clamp(min(3vh,3vw), min(6vh,6vw), min(20vh,20vw));
+height:fit-content;
+width:fit-content;
+transform: translateX(-7.5vh) translateY(-7.5vw);
+font-size: clamp(min(0.5vh,0.5vw), min(1.3vh,1.3vw), min(2.3vh,2.3vw));
+transition: transform 600ms ease, font-size 300ms ease;
+}
+/* YING-YANG */
+
+.yin-yang {
+  grid-area: center;
+  position: relative;
+  display: grid;
+  align-items: center;
+  place-items: center;
+  margin:auto;
+  aspect-ratio: 1:1;
+  width: clamp(50vw, 70vw, 75vw); 
+  height: clamp(50vw, 70vw, 75vw);  
+  max-width: 60vw;
+  max-height: 60vh;
+  z-index: 10;               
+}
+
+.yin-yang-svg {
+  display: block;
+  width:fit-content;
+  height:fit-content;
+  max-height:60vh;
+  max-width: 60vw;
+  overflow: visible;         /* prevents clipping of shadows/expansion */
+  aspect-ratio: 1:1;
+}
+
+/* Pointer/hover states on the two halves */
+.yin, .yang {
+  cursor: pointer;
+  transition: filter 2s ease, transform 2s ease;
+  transform-origin: 100px 100px; /* keep scaling from circle center */
+  transform-box: view-box;
+}
+.yin path,.yin circle,.yin text {
+  transition: transform 1s ease, font-size 1s ease, fill 1s ease, color 1s ease;
+}
+.yin:hover {
+  transform: translatex(15%) translateY(-20%) scale(1.8) ;
+}
+.yin:hover path {
+  filter: drop-shadow(3px 18px 22px #12ffe7);
+}
+.yin:hover circle {
+  transform: translateX(-20%) translateY(-11%) scale(1.8);
+}
+.yin:hover text {
+  fill: #001efd;
+  font-size: 0.9em;
+  transform: translatex(7%)  translateY(5%) scale(0.7)
+}
+.yin .yin-list-svgtxt {
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  transform-box: fill-box;
+  transform-origin: 100px 100px; /* same center as the half */
+}
+.yin:hover .yin-list-svgtxt {
+  opacity: 1;
+  transform: translateX(-10%) translateY(-150%) scale(0.6); /* tiny glide; use px/rem so it’s stable */
+}
+/* yang half */
+.yang path,.yang circle,.yang text{
+  transition: transform 1s ease, font-size 1s ease, fill 1s ease, color 1s ease;
+}
+
+/* Mirror Yin’s motion (60% → -60%, -20% → +20%) */
+.yang:hover {
+  transform: translateX(-15%) translateY(20%) scale(2);
+  filter: drop-shadow(3px 18px 22px rgb(0, 17, 255));
+}
+
+/* Dot / text tweaks (mirror) */
+.yang:hover circle
+ { transform: translateY(-30%) translateX(-20%) scale(1.8) }
+
+.yang:hover text   
+{ fill: rgb(0, 174, 255); font-size: 0.9em; 
+  transform: translateX(9%) translateY(14%) scale(0.7); }
+
+/* SVG list inside Yang: fade/slide in */
+.yang .yang-list-svgtxt {
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  transform-box: fill-box;
+  transform-origin: 100px 100px;
+}
+.yang:hover .yang-list-svgtxt {
+  opacity: 1;
+  transform: translateX(-3%) translateY(55%) scale(0.6);
+}
+
+
+/* 2) Full-viewport overlay, initially invisible */
+.layout::before {
+  content: "";
+  position: fixed;          /* covers everything regardless of scroll */
+  inset: 0;
+  background: transparent;  /* will be set on hover below */
+  opacity: 0;
+  transition: opacity 1s ease, background-color 1s ease;
+  pointer-events: none;     /* don't block interactions */
+  z-index: 5;             /* above content, but non-interactive */
+}
+
+/* 3) When YIN is hovered, dark blue wash */
+.layout:has(.yin:hover)::before { /* pogleda v class layout, in pogleda če uporabnik hovera nad yin
+                                in apliciraj te spremembe na .layout::before*/
+  background: rgba(57, 47, 255, 0.28); /* #392fff @ ~28% */
+  opacity: 1;
+}
+
+/* 4) When YANG is hovered, cyan wash */
+.layout:has(.yang:hover)::before {
+  background: rgba(70, 239, 255, 0.28); /* #46efff @ ~28% */
+  opacity: 1;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

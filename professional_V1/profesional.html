@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profesional</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="profesional_style.css">
+</head>
+<body>
+
+<div class="header">
+    <div class="description">I am a biochemistry student at the University of Ljubljana with hands-on experience in laboratory work and pharmaceutical practice.
+Alongside my studies, I have developed strong analytical skills through data projects, including dashboards and statistical insights.
+My scientific training has taught me precision, problem-solving, and the ability to learn complex material quickly.
+<p></p>Through diverse roles I have also built resilience, adaptability, and strong communication skills.
+Colleagues value my empathy, teamwork, and calm approach under pressure. I aim to combine my scientific knowledge, data literacy, and interpersonal strengths to contribute meaningfully in dynamic professional environments.</p>
+</div>
+    <nav class="index">
+    <ul>
+    <li><a href="#projects" data-scroll>Projects</a></li>
+    <li><a href="#education" data-scroll>Education</a></li>
+    <li><a href="#work" data-scroll>Experiences</a></li>
+    <li><a href="#references" data-scroll>References</a></li>
+    <li><a href="#about" data-scroll>More about me</a></li>
+    <li><a href="#home" data-scroll>Home</a></li>
+    </ul>
+    </nav>
+    <button id="toggle-header">minimize header</button>
+    <div class="contact">
+    <ul><li>GMAIL</li> 
+        <li>Linkedin</li>
+        <li>Github</li>
+        <li>PDF CV</li>
+        <li>Freelancing site</li>
+ 
+    </ul>
+    </div>
+</div>
+<main class="grid">
+<section id="projects" class="projects"><h1>Data projects</h1>
+  <p class="projects-intro">
+  These projects reflect how I learn best — by exploring real data, testing ideas, 
+  and building practical solutions. Each project marks a step in my progression: 
+  early work shows where I started, while newer ones highlight cleaner design, 
+  broader tools, and deeper insights. 
+  <br><br>
+  To make browsing easier, you can sort by date, complexity, or number of 
+  languages used, or search for specific techniques. Whether you look at a quick 
+  Excel analysis or a full interactive dashboard, each project represents both my 
+  technical growth and my curiosity to understand the world through data.
+</p>
+  <!-- sort by function -->
+  <div class="projects-toolbar">
+    <label for="project-sort">Sort by:</label>
+    <select id="project-sort">
+      <option value="newest">Newest</option>
+      <option value="oldest">Oldest</option>
+      <option value="complexity">Complexity</option>
+      <option value="languages"># Languages</option>
+    </select>
+      <label for="project-search" style="margin-left:.75rem;">Search for:</label>
+      <input id="project-search" type="text" placeholder="e.g. regression, Streamlit🔍" />
+      <button id="project-search-btn" type="button">Search</button>
+      <button id="project-search-clear" type="button" aria-label="Clear search" title="Clear">×</button>
+      <span id="project-search-status" aria-live="polite"></span>
+
+  </div>
+
+    <article class="project-card"data-date="2025-09" data-complexity="5">
+    <details>
+    <summary>
+      <h3>Interactive web CV<img class="icon" src="html.png"><img class="icon" src="css.png"><img class="icon" src="javascript.png"></h3>
+      <p class="summary">Creative display of professional and personal sides of Jakob Urh Veler.</p>
+      <p class="applied">Applied knowledge: HTML, CSS, JavaScript (JS)</p>
+      <p class="focus">Focus areas: Designing and coding a user-friendly website from scratch, balancing formal and casual presentation.</p>
+    </summary>
+    <section class="details">
+      <p>Date: september 2025</p>
+      <p>Built a fully responsive website where the homepage relies only on HTML and CSS, 
+        while professional and personal sections use JavaScript for interactivity. 
+        Focused on clean navigation, subtle animations, and layout balance to present both personal identity and technical skills.  </p>
+      <div class="links"><ul>
+        <li><a href="#">Home page CSS</a></li> 
+        <li> <a href="#">Profesional page CSS</a></li> 
+        <li><a href="#">Profesional page JS</a></li> 
+        <li><a href="#">Personal page CSS</a></li>
+        <li><a href="#">Personal page JS</a></li>
+      </ul></div>
+    </section>
+    </details>
+</article>
+
+
+<article class="project-card"data-date="2025-08" data-complexity="5">
+  <details>
+    <summary>
+      <h3>Salary analysis in data, machine learning and AI <img class="icon" src="python.png"><img class="icon" src="excel.webp"><img class="icon" src="word.webp"></h3>
+      <p class="summary">Analysis of salaries and remote-work prevalence across data, AI, and machine learning roles.</p>
+      <p class="applied">Applied knowledge: Python (Pandas, Matplotlip, Numpy, Streamlit, dictionaries) and Excel (Pivot tables, Graphs, Xlookup, other basic functions) </p>
+      <p class="focus">Focus areas: Data cleaning, grouping nearly 400 job titles into broader categories, 
+        calculating average and median salaries, and building an interactive dashboard for exploration. </p>
+    </summary>
+    <section class="details">
+      <p>Date: august 2025</p>
+      <p>Converted all salaries to EUR for comparability and reorganized job titles into 20 groups. Analyzed salaries by role, experience, location, and work type (remote, hybrid, office). 
+        Results show experience level as the main driver of pay, with senior roles earning multiples of entry-level positions. Remote work is common in most data roles, without major salary penalties. The interactive dashboard allows users to explore salaries by role, year, and company type.</p>
+            <div class="links"><ul>
+        <li> <a href="#">Raw data</a></li> 
+        <li><a href="#">PDF report</a></li> 
+        <li><a href="#">Excel analysis</a></li>
+        <li><a href="#">Python analysis</a></li>
+        <li><a href="#">Interactive dashboard</a></li>
+      </ul></div>
+    </section>
+  </details>
+</article>
+
+
+<article class="project-card"data-date="2025-06" data-complexity="3">
+  <details>
+    <summary>
+      <h3>Analysis of world happiness report 2021 <img class="icon" src="excel.webp"><img class="icon" src="word.webp"></h3>
+      <p class="summary">Exploratory analysis of how GDP, social support, life expectancy, freedom, generosity, and corruption influence national happiness. </p>
+      <p class="applied">Applied knowledge: Excel (Pivot tables, Graphs, Correl, other basic functions)</p>
+      <p class="focus">Focus areas: Cleaning and preparing the dataset, correlation analysis, custom indices, regression modeling, and regional comparisons.
+</p>
+    </summary>
+    <section class="details">
+      <p>Date: june 2025</p>
+      <p>Cleaned and standardized survey data for 149 countries. Performed correlation analysis, finding GDP, life expectancy, and social support most strongly linked to happiness. 
+        Designed a custom “Wellbeing Score” index to test alternative rankings, and built a regression model predicting scores with ~0.4 average error. 
+        Highlighted dataset limitations (e.g., cultural differences not included, uneven regional sampling) while demonstrating statistical analysis and visualization skills.</p>
+        <div class="links"><ul>
+        <li> <a href="#">Raw data</a></li> 
+        <li><a href="#">PDF analysis report</a></li> 
+        <li><a href="#">Excel analysis</a></li>
+      </ul></div>
+    </section>
+  </details>
+  </article>
+
+  <article class="project-card"data-date="2025-05" data-complexity="3">
+  <details>
+    <summary>
+      <h3>Analysis of social media addiction <img class="icon" src="excel.webp"><img class="icon" src="word.webp"></h3>
+      <p class="summary">Analysis of how age, gender, education, and region influence social media use and its academic impacts. </p>
+      <p class="applied">Applied knowledge: Excel (Pivot tables, XLOOKUP, COUNTIFS, AVERAGEIFS, data visualization)</p>
+      <p class="focus">Focus areas: Cleaning and structuring survey data, regional grouping of 111 countries, platform categorization, and visualization of patterns.
+</p>
+    </summary>
+    <section class="details">
+      <p>Date: maj 2025</p>
+      <p>Analyzed responses from 705 students. Results suggest teenagers and young adults spend ~5 hours/day on social media, reducing sleep and academic performance. 
+        Younger groups were more vulnerable, while gender and relationship status showed little influence. Instagram was the most popular platform overall. Dataset limitations (imbalanced regional and gender representation) reduce generalizability, but the project highlights Excel skills and critical interpretation of survey data.</p>
+      <div class="links"><ul>
+        <li> <a href="#">Raw data</a></li> 
+        <li><a href="#">PDF analysis report</a></li> 
+        <li><a href="#">Excel analysis</a></li>
+      </ul></div>
+    </section>
+  </details>
+</article>
+    </section>
+
+    <section class="travel">
+  <h2>Travelling projects</h2>
+  <p>WORLD MAP</p>
+</section>
+
+    <div class="avatar" id="avatar">
+      <div class="bubble" id="avatar-bubble" aria-live="polite"></div>
+      <p id="A">⬅️A</p><p id="D">D➡️</p>
+    </div>
+
+    <section id="education" class="education">
+        <h2>Education</h2>
+        <h4>Bachelor of Biochemistry, University of Ljubljana, 4 years</h4>
+    <ul>
+        
+         <p>Acquired competencies:
+            <ul class="biochemistry"><li>Analytical and critical thinking; ability to solve biochemical and molecular biology problems.</li>
+                <li>Proficiency in laboratory methodologies, including biochemical analysis and experimentation.</li>
+                <li>Accurate planning, execution, and interpretation of experiments with attention to reliability and limitations.</li>
+                <li>Use of statistical and computational tools (including bioinformatics) for data analysis.</li>
+                <li>Independent learning, teamwork, and professional responsibility in research and applied settings.</li>
+                <li>Ability to analyze large datasets from various biochemical and interdisciplinary sources, identify patterns, and critically interpret results.</li>
+            </ul>
+          </p> 
+        <img src="fkkt.png" class="fkkt">
+            <h4>Pharmaceutical tehnician, GSŠK Ruše, 4 years</h4>
+    <ul>
+         <p>Acquired competencies:
+            <ul class="pharmacy"><li>Preparation and quality control of pharmaceutical products (including magistral and galenic formulations).</li>
+                <li>Knowledge of pharmacology, toxicology, and safe handling of medicinal substances.</li>
+                <li>Maintaining pharmaceutical inventory, categorizing products, and ensuring compliance with regulations.</li>
+                <li>Supporting patient care through responsible dispensing of medicines and information.</li>
+                <li>Collaboration with healthcare professionals and application of good laboratory and pharmacy practice.</li>
+            </ul>
+          </p> 
+         <img src="ruse.png" class="fkkt">
+    </ul>
+            <h4>Primary education, Primary school (OŠ1) Slovenj Gradec, 9 years</h4>
+
+
+         <p>Acquired competencies:
+            <ul class="primary"><li>General foundational education and development of learning discipline.</li>
+            </ul>
+          </p> 
+        
+  </section>
+    <section id="work" class="experience"><h2>Work experiences</h2>
+    <p>Hospitality Roles (Waiter, Reception, Cook’s Assistant, Security)</p>
+    <p>2020 – 2025, multiple employers (Café Utrip, Kavarna Cacao, McDonald’s, Hotel Breza)</p>
+    <ul>
+        <li>Delivered customer service in high-pressure environments, handling food, drinks, and guest support.</li>
+        <li>Managed cash, inventory, and daily openings/closings.</li>
+        <li>Coordinated with international staff teams.</li>
+    </ul>
+        <p>Pharmaceutical Technician</p>
+    <p>2021 – 2021, Mariborske lekarne & Farmácia de Lamaçães (Portugal)</p>
+    <ul>
+        <li>Supported pharmaceutical inventory and categorized medical products.</li>
+        <li>Prepared magistral formulations and ensured compliance with protocols.</li>
+        <li>Gained experience in both local and international settings.</li>
+    </ul>
+            <p>Caretaker (Home Care)</p>
+    <p>2024 - 2025, Home Care Institute Ljubljana</p>
+    <ul>
+        <li>Assisted patients with hygiene, nutrition, and mobility.</li>
+        <li>Maintained strict hygiene standards and provided empathetic support.</li>
+        <li>Adapted quickly to changing patient needs and schedules.</li>
+    </ul>
+  </section>
+    <section id="references" class="references">
+    <section class="article">
+    <div class="headline">
+    <h1>In Their Words</h1>
+    <h4>Issue no. 22, Enemy to disinformation. 22.09.2025</h4>
+    <h2>Professional Endorsements</h2>
+    <hr>
+    <h3 id="title">JAKOB URH - THE HIDDEN GEM</h3>
+    </div>
+    <img src="zod.png" class="picture1">
+    <div  class="quote1">
+<h3>Home Care Institute Ljubljana, 2025</h3>
+    <h4>    “Jakob distinguished himself through his friendliness, openness, flexibility, and dedication to the well-being of the elderly.”</h4>
+    </div>
+    <p class="text1">
+    Jakob Urh Veler, born on May 10, 2003, worked as a home care assistant at the Home Care Institute in Ljubljana from September 6, 2023 to October 30, 2024, and again from March 17, 2025 to April 11, 2025.
+During this time, Jakob proved himself to be an outstanding employee. He distinguished himself through his friendliness, openness, flexibility, and dedication to the well-being of the elderly.
+ He performed his work conscientiously and in full accordance with the highest ethical standards. Jakob quickly adapted to new tasks and carried them out exceptionally well. 
+    </p>
+    <p class="text2">
+Home care assistance is fieldwork that requires organizational skills, precision, reliability, and independence. Jakob demonstrated all of these qualities, and regardless of the diversity of tasks or locations, he never found them to be an obstacle. He adapted quickly to each situation. 
+      With his strong sense of empathy—an essential quality in our profession—he was always able to connect with clients and provide the support they needed. He also communicated effectively, making collaboration with him consistently pleasant and constructive.
+      We would be delighted to work with Jakob again in the future.
+    </p>
+        <h4 class="quote12">    “With his strong sense of empathy, he was always able to connect with clients and provide the support they needed.”</h4>
+    
+
+<div class="quote2">
+ <h3 >Café Utrip, 2025</h3>
+ <h4>“Although he started without prior experience, Jakob quickly proved himself with his dedication, initiative, and adaptability, becoming a reliable and valued member of our staff.”</h4>
+</div>
+
+
+<p class="text3">
+  It is our pleasure to recommend Mr. Jakob Urh Veler, who was part of our team at Café Utrip, employed through the Student Service. 
+  Although he started without prior experience, Jakob quickly proved himself with his dedication, initiative, and adaptability, becoming a reliable and valued member of our staff.
+Before beginning independent work, Jakob completed a 12-hour training program under the mentorship of an experienced waiter. He quickly mastered the essentials of running a café: preparing and tidying the space, handling orders and payments, assisting in the kitchen, promoting products, and maintaining cleanliness and order. At first, he mostly covered evening shifts, and later also worked during weekends and afternoons.
+</p>
+<p class="text4">Jakob demonstrated an exceptional eagerness to learn and progressed rapidly into a highly capable waiter. His patience, respectful attitude towards guests and colleagues, professionalism, and work ethic 
+all contributed to the positive atmosphere in the café. Guests often praised his friendliness and professional demeanor, which added to our reputation and reliability.
+He managed his tasks well, set priorities effectively, and remained focused even during the busiest moments. Jakob’s openness, curiosity, and respect for every member of the
+team—regardless of their level of education—also stood out. In the workplace, he consistently brought positive energy and a willingness to help.
+For these reasons, we wholeheartedly recommend Jakob as an exceptionally reliable, hard-working, and warm-hearted colleague.</p>
+<img src="utrip1.png" class="picture2">
+
+<h4 class="quote3">
+“...we wholeheartedly recommend Jakob as an exceptionally reliable, hard-working, and warm-hearted colleague.”  
+</h4>
+
+    </section>
+  </div>
+</main>
+<script src="profesional.js" > //js
+
+</script>
+</body>
+</html>
